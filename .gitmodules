@@ -1,0 +1,6 @@
+[submodule "GE-Sim-V2"]
+	path = GE-Sim-V2
+	url = https://github.com/AgibotTech/GE-Sim-V2.git
+[submodule "EWMBench"]
+	path = EWMBench
+	url = https://github.com/AgibotTech/EWMBench.git

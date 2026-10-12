@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 360" width="1280" height="360" role="img" aria-label="AgiBot World Challenge @ ICRA 2026, World Model track: GE-Sim 2.0 + LoRA turns one real camera frame and the robot's actions into the video of what happens next. Validation score 0.8079.">
+  <defs>
+    <!-- palette from the challenge site: yellow-orange #FCAF09 -> pink #F635FF -> purple #C100D7 -->
+    <linearGradient id="bg" x1="0" y1="0.15" x2="1" y2="0.85">
+      <stop offset="0" stop-color="#FCAF09"/>
+      <stop offset="0.3" stop-color="#FF7A3D"/>
+      <stop offset="0.6" stop-color="#F635FF"/>
+      <stop offset="0.85" stop-color="#C100D7"/>
+      <stop offset="1" stop-color="#7A12C9"/>
+    </linearGradient>
+    <radialGradient id="orb" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.45"/>
+      <stop offset="0.6" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#2a0845" stop-opacity="0.22"/>
+    </linearGradient>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.1" fill="#ffffff" fill-opacity="0.16"/>
+    </pattern>
+    <!-- one camera frame: wall, table edge and a box on the table -->
+    <symbol id="scene" viewBox="0 0 160 120">
+      <rect width="160" height="120" rx="6" fill="#1e1b3a"/>
+      <rect y="62" width="160" height="58" fill="#3b3560"/>
+      <rect y="60" width="160" height="4" fill="#57508a"/>
+      <rect x="100" y="40" width="34" height="26" rx="2" fill="#FCAF09"/>
+      <rect x="100" y="40" width="34" height="6" fill="#FFD166"/>
+    </symbol>
+    <!-- a two-finger gripper, pointing right -->
+    <symbol id="grip" viewBox="0 0 60 30">
+      <rect x="0" y="10" width="34" height="10" rx="3" fill="#f1f5f9"/>
+      <rect x="30" y="6" width="8" height="18" rx="2" fill="#a5b4fc"/>
+      <rect x="38" y="6" width="18" height="4" rx="2" fill="#e0e7ff"/>
+      <rect x="38" y="20" width="18" height="4" rx="2" fill="#e0e7ff"/>
+    </symbol>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="360" fill="url(#bg)"/>
+  <rect width="1280" height="360" fill="url(#dots)"/>
+  <!-- soft iridescent orbs, a nod to the bubble on the challenge site -->
+  <circle cx="1180" cy="40" r="190" fill="url(#orb)"/>
+  <circle cx="640" cy="380" r="210" fill="url(#orb)" opacity="0.7"/>
+  <circle cx="60" cy="-30" r="160" fill="url(#orb)" opacity="0.8"/>
+  <!-- flowing ribbons -->
+  <path d="M-20 300 C 260 220, 520 360, 800 270 S 1180 180, 1300 240" fill="none" stroke="#ffffff" stroke-opacity="0.22" stroke-width="2"/>
+  <path d="M-20 322 C 280 250, 540 380, 820 296 S 1190 214, 1300 266" fill="none" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+  <rect width="1280" height="360" fill="url(#sheen)"/>
+
+  <!-- text -->
+  <g font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif">
+    <rect x="64" y="58" width="196" height="28" rx="14" fill="#1a0b2e" fill-opacity="0.82"/>
+    <text x="162" y="77" fill="#FFD166" font-size="13" font-weight="700" letter-spacing="2.2" text-anchor="middle">WORLD MODEL TRACK</text>
+    <text x="62" y="146" fill="#1a0b2e" font-size="54" font-weight="800" letter-spacing="-0.5">AgiBot World Challenge</text>
+    <text x="62" y="204" fill="#1a0b2e" font-size="54" font-weight="800" letter-spacing="-0.5">@ ICRA 2026</text>
+    <text x="64" y="246" fill="#2a0f45" font-size="19" font-weight="600">One real frame + robot actions → the video of what happens next.</text>
+
+    <g font-size="15" font-weight="700">
+      <rect x="64" y="276" width="176" height="34" rx="17" fill="#1a0b2e" fill-opacity="0.85"/>
+      <text x="152" y="298" fill="#ffffff" text-anchor="middle">GE-Sim 2.0 + LoRA</text>
+      <rect x="252" y="276" width="172" height="34" rx="17" fill="#1a0b2e" fill-opacity="0.85"/>
+      <text x="338" y="298" fill="#FFD166" text-anchor="middle">val score 0.8079</text>
+      <rect x="436" y="276" width="128" height="34" rx="17" fill="#ffffff" fill-opacity="0.35" stroke="#1a0b2e" stroke-opacity="0.35"/>
+      <text x="500" y="298" fill="#1a0b2e" text-anchor="middle">nDTW 0.901</text>
+    </g>
+  </g>
+
+  <!-- illustration: real frame + actions  ->  generated filmstrip -->
+  <g font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" font-weight="700">
+    <use href="#scene" x="772" y="98" width="140" height="105"/>
+    <use href="#grip" x="778" y="150" width="50" height="25"/>
+    <rect x="772" y="98" width="140" height="105" rx="6" fill="none" stroke="#ffffff" stroke-width="2.5"/>
+    <text x="842" y="86" fill="#ffffff" text-anchor="middle">1 real frame</text>
+
+    <polyline points="772,262 792,248 812,256 832,236 852,242 872,226 892,232 912,222" fill="none" stroke="#FFD166" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="912" cy="222" r="4.5" fill="#FFD166"/>
+    <text x="842" y="290" fill="#ffffff" text-anchor="middle">+ robot actions</text>
+
+    <line x1="926" y1="192" x2="970" y2="192" stroke="#ffffff" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+    <!-- generated frames as a filmstrip; the gripper moves in and closes on the box -->
+    <rect x="974" y="132" width="270" height="120" rx="6" fill="#1a0b2e" fill-opacity="0.88"/>
+    <rect x="986" y="140" width="8" height="6" rx="1.5" fill="#ffffff" fill-opacity="0.22"/><rect x="986" y="238" width="8" height="6" rx="1.5" fill="#ffffff" fill-opacity="0.22"/><rect x="1004" y="140" width="8" height="6" rx="1.5" fill="#ffffff" fill-opacity="0.22"/><rect x="1004" y="238" width="8" height="6" rx="1.5" fill="#ffffff" fill-opacity="0.22"/><rect x="1022" y="140" width="8" height="6" rx="1.5" fill="#ffffff" fill-opacity="0.22"/><rect x="1022" y="238" width="8" height="6" rx="1.5" fill="#ffffff" fill-opacity="0.22"/><rect x="1040" y="140" width="8" height="6" rx="1.5" fill="#ffffff" fill-opacity="0.22"/><rect x="1040" y="238" width="8" height="6" rx="1.5" fill="#ffffff" fill-opacity="0.22"/><rect x="1058" y="140" width="8" height="6" rx="1.5" fill="#ffffff" fill-opacity="0.22"/><rect x="1058" y="238" width="8" height="6" rx="1.5" fill="#ffffff" fill-opacity="0.22"/><rect x="1076" y="140" width="8" height="6" rx="1.5" fill="#ffffff" fill-opacity="0.22"/><rect x="1076" y="238" width="8" height="6" rx="1.5" fill="#ffffff" fill-opacity="0.22"/><rect x="1094" y="140" width="8" height="6" rx="1.5" fill="#ffffff" fill-opacity="0.22"/><rect x="1094" y="238" width="8" height="6" rx="1.5" fill="#ffffff" fill-opacity="0.22"/><rect x="1112" y="140" width="8" height="6" rx="1.5" fill="#ffffff" fill-opacity="0.22"/><rect x="1112" y="238" width="8" height="6" rx="1.5" fill="#ffffff" fill-opacity="0.22"/><rect x="1130" y="140" width="8" height="6" rx="1.5" fill="#ffffff" fill-opacity="0.22"/><rect x="1130" y="238" width="8" height="6" rx="1.5" fill="#ffffff" fill-opacity="0.22"/><rect x="1148" y="140" width="8" height="6" rx="1.5" fill="#ffffff" fill-opacity="0.22"/><rect x="1148" y="238" width="8" height="6" rx="1.5" fill="#ffffff" fill-opacity="0.22"/><rect x="1166" y="140" width="8" height="6" rx="1.5" fill="#ffffff" fill-opacity="0.22"/><rect x="1166" y="238" width="8" height="6" rx="1.5" fill="#ffffff" fill-opacity="0.22"/><rect x="1184" y="140" width="8" height="6" rx="1.5" fill="#ffffff" fill-opacity="0.22"/><rect x="1184" y="238" width="8" height="6" rx="1.5" fill="#ffffff" fill-opacity="0.22"/><rect x="1202" y="140" width="8" height="6" rx="1.5" fill="#ffffff" fill-opacity="0.22"/><rect x="1202" y="238" width="8" height="6" rx="1.5" fill="#ffffff" fill-opacity="0.22"/><rect x="1220" y="140" width="8" height="6" rx="1.5" fill="#ffffff" fill-opacity="0.22"/><rect x="1220" y="238" width="8" height="6" rx="1.5" fill="#ffffff" fill-opacity="0.22"/>
+    <use href="#scene" x="984" y="162" width="80" height="60"/>
+    <use href="#grip" x="988" y="181.5" width="27" height="13.5"/>
+    <rect x="984" y="162" width="80" height="60" rx="3" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="1.5"/>
+    <use href="#scene" x="1068" y="162" width="80" height="60"/>
+    <use href="#grip" x="1087" y="181.5" width="27" height="13.5"/>
+    <rect x="1068" y="162" width="80" height="60" rx="3" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="1.5"/>
+    <use href="#scene" x="1152" y="162" width="80" height="60"/>
+    <use href="#grip" x="1186" y="181.5" width="27" height="13.5"/>
+    <rect x="1152" y="162" width="80" height="60" rx="3" fill="none" stroke="#ffffff" stroke-opacity="0.95" stroke-width="2.5"/>
+    <text x="1109" y="278" fill="#ffffff" text-anchor="middle">generated video</text>
+  </g>
+</svg>

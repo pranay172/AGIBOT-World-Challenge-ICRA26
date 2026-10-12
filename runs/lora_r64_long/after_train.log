@@ -1,0 +1,11 @@
+[2026-10-08 18:19:14] waiting for runs/lora_r64_long to finish
+[2026-10-09 01:46:17] training ended: done 
+[2026-10-09 01:46:17] eval runs/lora_r64_long/best.pt -> preds/val/lora_r64_long_best
+[2026-10-09 02:07:22]   exit 0 frames 1545
+[2026-10-09 02:07:22] eval runs/lora_r64_long/step001000.pt -> preds/val/lora_r64_long_step001000
+[2026-10-09 02:28:34]   exit 0 frames 1545
+[2026-10-09 02:28:34] eval runs/lora_r64_long/step002000.pt -> preds/val/lora_r64_long_step002000
+[2026-10-09 02:49:30]   exit 0 frames 1545
+[2026-10-09 02:49:30] eval runs/lora_r64_long/step004000.pt -> preds/val/lora_r64_long_step004000
+[2026-10-09 03:10:42]   exit 0 frames 1545
+[2026-10-09 03:10:42] EVAL_DONE; waiting up to 10800 s for the laptop to pull results

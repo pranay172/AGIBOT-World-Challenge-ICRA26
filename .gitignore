@@ -1,0 +1,31 @@
+# environments, caches, weights, data (downloaded by cloud/setup_gesim2.sh)
+.venv*/
+.cache/
+.uv/
+__pycache__/
+*.pyc
+weights/
+WorldModel/
+WorldModel_Dataset/
+dl_train.log
+
+# superseded local material (see README)
+archive/
+
+# checkpoints are too large for git (published separately)
+*.pt
+*.pth
+*.safetensors
+*.zip
+
+# generated videos and logs; keep only the score summaries
+preds/**
+!preds/
+!preds/val/
+!preds/val/*_scores/
+!preds/val/*_scores/summary.json
+!preds/val/*_scores/per_trial.csv
+runs/logs/
+runs/*/*.jpg
+# diagnostic images are built from CC BY-NC-SA dataset frames and not needed to reproduce anything
+runs/diag/

@@ -1,0 +1,9 @@
+This repository's own code is MIT licensed (see LICENSE), with these exceptions:
+
+- band_clip.py is adapted from GE-Sim-V2's band renderer and is licensed under
+  CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/).
+- docs/demo_val.gif and docs/demo_test.gif contain frames from the AgiBot World
+  Challenge 2026 dataset by AgiBot and are licensed under CC BY-NC-SA 4.0.
+- The GE-Sim-V2 and EWMBench submodules keep their own licenses.
+
+See the "License and credits" section of README.md for details.
